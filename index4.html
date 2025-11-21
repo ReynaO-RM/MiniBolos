@@ -22,6 +22,8 @@
       <div class="badge"><span>Total bolos:</span> <b id="totalBolos">0</b></div>
       <div class="badge"><span>Bolos derribados:</span> <b id="hitBolos">0</b></div>
     </div>
+
+    <!-- Portada con instrucciones -->
     <div id="cover-page">
         <h1>Mini Bolos VR</h1>
         <p>Bienvenido al juego de bolos. ¡Prepárate para una experiencia increíble!</p>
@@ -37,13 +39,38 @@
             <li>Jurado Torres Juan</li>
             <li>Rodríguez Morales Reyna Olivia</li>
         </ul>
-        <button onclick="startGame()">Iniciar Juego</button>
+        <button id="start-button">Iniciar Juego</button>
     </div>
 
     <!-- Audio ambiente (se inicia al entrar a VR) -->
     <audio id="ambient" src="assets/audio/fondo.mp3" preload="auto" loop></audio>
 
-    <canvas id="scene"></canvas>
+    <!-- Canvas para la escena 3D -->
+    <canvas id="scene" style="display: none;"></canvas>
+
+    <script type="module">
+      // Obtener el botón y la portada
+      const startButton = document.getElementById("start-button");
+      const coverPage = document.getElementById("cover-page");
+      const sceneCanvas = document.getElementById("scene");
+
+      // Función para iniciar el juego VR
+      function startGame() {
+        // Ocultar la portada
+        coverPage.style.display = 'none';
+        // Mostrar el canvas de la escena 3D
+        sceneCanvas.style.display = 'block';
+        
+        // Aquí puedes agregar el código de inicialización de Three.js o la escena VR
+        // Por ejemplo, cargar el juego en VR, empezar el entorno 3D, etc.
+        document.getElementById('ambient').play();  // Reproducir música de fondo
+      }
+
+      // Asignar la función al botón de iniciar juego
+      startButton.addEventListener("click", startGame);
+    </script>
+
+    <!-- El script principal del juego -->
     <script type="module" src="main4.js"></script>
   </body>
 </html>

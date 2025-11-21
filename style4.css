@@ -5,9 +5,9 @@
 html, body {
   margin: 0;
   height: 100%;
-  background: #03040a;
+  background: #0d1117;
   color: #e6e9f5;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #scene {
@@ -35,6 +35,7 @@ html, body {
   gap: 8px;
   z-index: 10;
 }
+
 .badge {
   display: inline-flex;
   gap: 8px;
@@ -56,28 +57,37 @@ html, body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  background: linear-gradient(135deg, #1a202c, #2d3748);
   border-radius: 15px;
-  width: 80%;
-  max-width: 500px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
   z-index: 20;
   color: #ffffff;
+  font-size: 1.2em;
+}
+
+#cover-page .header {
+  margin-bottom: 20px;
 }
 
 #cover-page h1 {
-  font-size: 2.5em;
+  font-size: 3em;
+  font-weight: 600;
   margin-bottom: 15px;
+  color: #ff6600;
 }
 
 #cover-page p {
-  font-size: 1.2em;
+  font-size: 1.3em;
   margin-bottom: 20px;
 }
 
 #cover-page h2 {
   font-size: 1.5em;
   margin-top: 20px;
+  color: #ffffff;
 }
 
 #cover-page ul {
@@ -88,19 +98,37 @@ html, body {
 
 #cover-page ul li {
   font-size: 1.1em;
+  margin-bottom: 10px;
 }
 
 #cover-page button {
-  padding: 15px 30px;
+  padding: 15px 40px;
   font-size: 1.2em;
   background-color: #ff6600;
   border: none;
   color: white;
   cursor: pointer;
   border-radius: 10px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 #cover-page button:hover {
-  background-color: #ff4500;
+  background-color: #e65c00;
+  transform: translateY(-3px);
+}
+
+#cover-page button:active {
+  background-color: #cc4e00;
+  transform: translateY(1px);
+}
+
+#cover-page h3 {
+  margin-top: 30px;
+  font-size: 1.4em;
+  color: #f1f1f1;
+}
+
+#cover-page ul li {
+  font-size: 1.2em;
+  margin-bottom: 8px;
 }
